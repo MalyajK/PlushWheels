@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/main/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <title>Plush Wheels - Vintage Cars</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar__brand-container">
+        <img
+          src="img/main/cult-wheels-logo.png"
+          alt="Logo"
+          class="navbar__logo"
+        />
+        <div class="navbar__brand-name">
+          <a href="./index.html">Plush Wheels</a>
+        </div>
+      </div>
+      <div class="navbar__nav-items">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="./blog.html" class="navbar__link">Blog</a>
+          </li>
+          <li class="navbar__item">
+            <a href="./vehicles.html" class="navbar__link">Vehicles</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Accessories</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Services</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Contact Us</a>
+          </li>
+          <i class="navbar__icon fas fa-user-circle"></i>
+        </ul>
+      </div>
+      <i class="navbar__hamburger fas fa-bars" id="hamburger"></i>
+    </nav>
+    <!-- SMALL SCREEN MENU MODAL -->
+    <div class="navbar__modal" id="navbar-modal">
+      <div class="navbar__modal-container">
+        <div class="navbar__modal--element" id="close-navbar-modal"><i class="navbar__icon fas fa-times"></i></div>
+        <div class="navbar__modal--element"><a href="/blog.html">Blog</a></div>
+        <div class="navbar__modal--element"><a href="/vehicles.html">Vehicles</a></div>
+        <div class="navbar__modal--element"><a href="#">Accessories</a></div>
+        <div class="navbar__modal--element"><a href="#">Services</a></div>
+        <div class="navbar__modal--element"><a href="#">Contact Us</a></div>
+        <div class="navbar__modal--element"><i class="navbar__icon fas fa-user-circle"></i></div>
+      </div>
+    </div>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__text-box">
+        <h1 class="heading-primary mb-40 light">
+          <span class="heading-primary--main mb-20"
+            >Forward. In retro gear</span
+          >
+          <span class="heading-primary--sub">Curated Vintage Cars</span>
+        </h1>
+        <a href="#" class="btn btn--large btn--tertiary"
+          ><span><i class="fas fa-gas-pump btn__icon"></i></span>Tank up !</a
+        >
+      </div>
+    </header>
+    <!-- FEATURES -->
+    <section class="section-features">
+      <div class="heading-container">
+        <h2 class="heading-secondary heading-secondary--main mb-40 light">
+          Many routes ... One Destination
+        </h2>
+        <img
+          src="img/features/features.png"
+          alt="Features Pic"
+          class="features__main-pic mb-40"
+          id="old-car-sketch"
+        />
+      </div>
+      <div class="features-grid">
+        <!-- FEATURES 1 -->
+        <div class="col-1-of-4">
+          <div class="features">
+            <div class="features__picture features__picture--1">
+              <i class="fas fa-car"></i>
+            </div>
+            <h4 class="features__heading mb-10">Vintage Car Sales</h4>
+            <div class="features__details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              sit consectetur labore itaque culpa minima. Doloremque cumque
+              nobis repellat ea dolore vitae vero praesentium.
+            </div>
+          </div>
+        </div>
+        <!-- FEATURES 2 -->
+        <div class="col-1-of-4">
+          <div class="features">
+            <div class="features__picture features__picture--2">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h4 class="features__heading mb-10">Maintenance</h4>
+            <div class="features__details">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Explicabo perferendis et iure similique fugit magnam eos
+              laboriosam temporibus blanditiis aliquid ipsam obcaecatu 
+            </div>
+          </div>
+        </div>
+        <!-- FEATURES 3 -->
+        <div class="col-1-of-4">
+          <div class="features">
+            <div class="features__picture features__picture--3">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h4 class="features__heading mb-10">Accessories</h4>
+            <div class="features__details">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Explicabo molestias at soluta, maxime, sapiente quisquam
+              doloremque dolore culpa amet ipsam, ab minus quibusdam id 
+            </div>
+          </div>  
+        </div>
+        <!-- FEATURES 4 -->
+        <div class="col-1-of-4">
+          <div class="features">
+            <div class="features__picture features__picture--4">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h4 class="features__heading mb-10">Member's Club</h4>
+            <div class="features__details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              asperiores soluta sequi, nulla nam fuga perspiciatis ipsum fugiat,
+              iusto rem dolorem architecto? Molestiae illum
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SHOWCASE -->
+    <section class="section-showcase">
+      <div class="heading-container">
+        <h2 class="heading-secondary heading-secondary--main mb-40 light">
+          Latest Arrivals
+        </h2>
+      </div>
+      <div class="showcase__grid" id="showcase"></div>
+      </div>
+      <div class="showcase__paginate">
+        <i class="fas fa-circle showcase__dot showcase__dot--1"></i>
+        <i class="fas fa-circle showcase__dot showcase__dot--2"></i>
+        <i class="fas fa-circle showcase__dot showcase__dot--3"></i>
+      </div>
+    </section>
+    <!-- TESTIMONIALS -->
+    <section class="section-testimonials">
+      <div class="testimonials">
+        <div class="testimonials__header">
+          <h2 class="heading-secondary heading-secondary--main mb-80 light">
+            Real journeys, real stories
+          </h2>
+        </div>
+        <div class="testimonials__content">
+          <figure class="testimonials__shape">
+            <img
+              src="img/testimonials/user-1.jpeg"
+              alt=""
+              class="testimonials__pic testimonials__pic--1"
+            />
+          </figure>
+          <figure class="testimonials__shape">
+            <img
+              src="img/testimonials/user-2.jpeg"
+              alt=""
+              class="testimonials__pic testimonials__pic--2"
+            />
+          </figure>
+          <figure class="testimonials__shape">
+            <img
+              src="img/testimonials/user-3.jpeg"
+              alt=""
+              class="testimonials__pic testimonials__pic--3"
+            />
+          </figure>
+          <figure class="testimonials__shape">
+            <img
+              src="img/testimonials/user-4.jpeg"
+              alt=""
+              class="testimonials__pic testimonials__pic--4"
+            />
+          </figure>
+        </div>
+      </div>
+      <div class="testimonials__modal">
+        <div class="testimonials__modal-text">
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+          architecto libero amet explicabo possimus inventore, repellendus eum
+          modi minus quia?"
+        </div>
+      </div>
+    </section>
+    <!-- AWARDS -->
+    <section class="section-awards">
+      <div class="awards">
+        <h2 class="heading-secondary heading-secondary--main mb-80 light">
+          We picked a few along the way....
+        </h2>
+        <div class="awards__card-container">
+          <!-- AWARD 1 -->
+          <div class="awards__card-single">
+            <img
+              src="img/awards/laurel.png"
+              alt="Laurel"
+              class="awards__laurel"
+            />
+            <div class="awards__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </div>
+            <i class="fas fa-thumbs-up awards__icon awards__icon--1"></i>
+          </div>
+          <!-- AWARD 2 -->
+          <div class="awards__card-single">
+            <img
+              src="img/awards/laurel.png"
+              alt="Laurel"
+              class="awards__laurel"
+            />
+            <div class="awards__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <i class="fas fa-chart-line awards__icon awards__icon--2"></i>
+          </div>
+          <!-- AWARD 3 -->
+          <div class="awards__card-single">
+            <img
+              src="img/awards/laurel.png"
+              alt="Laurel"
+              class="awards__laurel"
+            />
+            <div class="awards__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <i class="fas fa-certificate awards__icon awards__icon--3"></i>
+          </div>
+          <!-- AWARD 4 -->
+          <div class="awards__card-single">
+            <img
+              src="img/awards/laurel.png"
+              alt="Laurel"
+              class="awards__laurel"
+            />
+            <div class="awards__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </div>
+            <i class="fas fa-seedling awards__icon awards__icon--4"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- OFFICES -->
+    <section class="section-offices">
+      <div class="offices">
+        <h2 class="heading-secondary heading-secondary--main mb-40 light">
+          We are never too far from you
+        </h2>
+        <div class="offices__map-container">
+          <div id="map" class="map"></div>
+          <div id="popup" class="ol-popup">
+            <a href="#" id="popup-closer" class="ol-popup-closer">&times;</a>
+            <div id="popup-content">CONTENT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <div class="section-footer">
+      <div class="footer">
+        <!-- FOOTER TOP -->
+        <div class="footer__top">
+          <!-- FOOTER LEFT -->
+          <div class="footer__banner-container">
+            <p class="footer__banner footer__banner--left">
+              Our Team
+              <span
+                ><i class="fas fa-user-friends footer__icon--left"></i
+              ></span>
+            </p>
+            <p class="footer__banner footer__banner--left">
+              contact us
+              <span><i class="fas fa-phone footer__icon--left"></i></span>
+            </p>
+            <p class="footer__banner footer__banner--right">
+              <span
+                ><i class="fas fa-user-graduate footer__icon--right"></i
+              ></span>
+              careers
+            </p>
+            <p class="footer__banner footer__banner--left">
+              Enquiries
+              <span
+                ><i class="fas fa-question-circle footer__icon--left"></i
+              ></span>
+            </p>
+            <p class="footer__banner footer__banner--right">
+              <span
+                ><i class="fas fa-search-dollar footer__icon--right"></i
+              ></span>
+              Investors
+            </p>
+            <p class="footer__banner footer__banner--left nbsp">&nbsp;</p>
+          </div>
+          <!-- FOOTER RIGHT -->
+          <div class="footer__content--right">
+            <img
+              src="img/footer/footer-car.png"
+              alt="Logo Big"
+              class="footer__logo"
+            />
+          </div>
+        </div>
+        <!-- FOOTER BOTTOM -->
+        <div class="footer__bottom">
+          <div class="footer__content--middle">
+            <div class="footer__social-container">
+              <i class="fab fa-twitter-square footer__social"></i>
+            </div>
+            <div class="footer__social-container">
+              <i
+                class="fab fa-instagram-square footer__social footer__social"
+              ></i>
+            </div>
+            <div class="footer__social-container">
+              <i
+                class="fab fa-facebook-square footer__social footer__social"
+              ></i>
+            </div>
+            <div class="footer__social-container">
+              <i class="fab fa-linkedin footer__social footer__social"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+  <script src="./maps.js"></script>
+  <script src="./showcase.js"></script>
+</html>

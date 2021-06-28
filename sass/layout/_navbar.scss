@@ -1,0 +1,159 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  background-color: rgba($color-black, 0.5);
+  width: 100%;
+  box-shadow: 0rem 1rem 1rem rgba($color-black, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+
+  &__brand-container {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+  }
+
+  &__logo {
+    height: $navbar-height;
+  }
+
+  &__brand-name {
+    display: inline-block;
+    color: $color-white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+    width: fit-content;
+    padding-left: 3rem;
+    text-decoration: none;
+
+    & a {
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+
+  &__nav-items {
+    display: flexbox;
+    align-items: stretch;
+    margin-right: 4rem;
+    height: $navbar-height;
+    width: fit-content;
+  }
+
+  &__list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+
+    @include respond(tab-port) {
+      display: block;
+      height: fit-content;
+      margin-top: 10rem;
+      transform: translateX(25vw);
+      display: none;
+    }
+
+    @include respond(phone) {
+      transform: translateX(15vw);
+      margin-top: 8rem;
+      display: none;
+    }
+  }
+
+  &__item {
+    &:hover {
+      border-bottom: 3px solid $color-tertiary;
+    }
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+    &:last-child {
+      margin-left: 20rem;
+    }
+
+    @include respond(tab-port) {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid $color-tertiary-light;
+      }
+    }
+  }
+
+  &__item a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: $color-white;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    color: $color-white;
+
+    @include respond(tab-port) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__hamburger {
+    font-size: 3.5rem;
+    margin-right: 3rem;
+    color: $color-white;
+    display: none;
+    cursor: pointer;
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &__modal {
+    position: fixed;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+    display: none;
+    z-index: 10;
+  }
+
+  &__modal-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 3rem 4rem;
+    width: 30vw;
+
+    @include respond(phone) {
+      width: 50vw;
+    }
+
+    & a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: $color-white;
+    }
+  }
+
+  &__modal--element {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid $color-tertiary;
+    }
+
+    &:first-child {
+      border-bottom: none;
+      text-align: right;
+      cursor: pointer;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// MARGINS
+.mb-10 {
+  margin-bottom: 1rem;
+}
+
+.mb-20 {
+  margin-bottom: 2rem;
+}
+
+.mb-30 {
+  margin-bottom: 3rem;
+}
+
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+.mb-80 {
+  margin-bottom: 8rem;
+}
+
+// ANIMATION CLASSES
+.moveInLeft {
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+.moveOutRight {
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+// Display
+.hide {
+  display: none;
+}

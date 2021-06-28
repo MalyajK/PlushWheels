@@ -1,0 +1,101 @@
+.awards {
+  text-align: center;
+
+  &__card-container {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    justify-self: center;
+    width: 100%;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 0rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 0rem;
+    }
+  }
+
+  &__card-single {
+    justify-content: center;
+    width: 100%;
+
+    @include respond(phone) {
+      height: 50rem;
+    }
+  }
+
+  &__laurel {
+    height: 25rem;
+    opacity: 0.7;
+
+    @include respond(tab-port) {
+      height: 35rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    color: $color-white;
+    text-align: center;
+    padding: 2rem;
+    background-image: linear-gradient(
+      to top left,
+      rgba($color-tertiary-light, 0.5),
+      rgba($color-tertiary-dark, 0.5)
+    );
+    border-radius: 3px;
+    box-shadow: 1rem 1rem 2rem rgba($color-black, 0.2);
+    transform: skewX(-7deg);
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__icon {
+    font-size: 8rem;
+    transform: translateY(-27rem);
+    text-shadow: 1rem 1rem 1rem rgba($color-black, 0.2);
+
+    @include respond(tab-land) {
+      transform: translate(1rem, -26rem);
+    }
+
+    @include respond(tab-port) {
+      font-size: 10rem;
+      transform: translate(1rem, -36rem);
+    }
+
+    @include respond(phone) {
+      height: 45rem;
+      font-size: 12rem;
+      transform: translate(0rem, -33rem);
+    }
+
+    &--1 {
+      color: $color-secondary-light;
+    }
+
+    &--2 {
+      color: $color-grey-dark-2;
+    }
+
+    &--3 {
+      color: $color-orange;
+    }
+
+    &--4 {
+      color: $color-grass;
+    }
+  }
+}

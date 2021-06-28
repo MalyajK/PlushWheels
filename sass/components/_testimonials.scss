@@ -1,0 +1,99 @@
+.testimonials {
+  text-align: center;
+  width: 100%;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    justify-items: center;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 6rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 6rem;
+    }
+  }
+
+  &__shape {
+    position: relative;
+    height: 25rem;
+    width: 25rem;
+    float: left;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 18px solid $color-grey-light-2;
+
+    @include respond(phone) {
+      height: 45rem;
+      width: 45rem;
+      border: 22px solid $color-grey-light-2;
+    }
+  }
+
+  &__pic {
+    height: 25rem;
+    opacity: 0.6;
+    transition: all 0.3s ease-out;
+    @include respond(phone) {
+      height: 45rem;
+      width: 45rem;
+    }
+
+    &--2 {
+      transform: translateX(-4rem);
+
+      @include respond(phone) {
+        width: 75rem;
+        transform: translateX(-8rem);
+      }
+    }
+
+    &--3 {
+      transform: translateX(-3rem);
+    }
+
+    &--4 {
+      transform: translateX(-8rem);
+      @include respond(phone) {
+        width: 75rem;
+        transform: translateX(-18rem);
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__modal {
+    display: flex;
+    width: 70%;
+    margin-top: 4rem;
+    text-align: center;
+    width: 100%;
+    visibility: hidden;
+
+    &--visible {
+      visibility: visible;
+    }
+  }
+
+  &__modal-text {
+    font-size: 3rem;
+    color: $color-dark-blue;
+    font-family: serif;
+    font-style: italic;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.vehicles-header {
+  position: relative;
+  height: 60vh;
+  background-image: linear-gradient(
+      rgba($color-black, 0.4),
+      rgba($color-primary, 0.4)
+    ),
+    url('../img/vehicles/vehicles-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+
+  &__text-box {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    @include center-align;
+  }
+}

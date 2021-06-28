@@ -1,0 +1,162 @@
+.showcase {
+  height: 90%;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 24% 0 24% 0 24% 0 24% 0;
+    grid-column-gap: 1%;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    @include respond(tab-port) {
+      grid-template-columns: 45% 0 45% 0;
+      grid-row-gap: 4rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 95% 0;
+      grid-row-gap: 4rem;
+    }
+  }
+
+  &__card-container {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    width: 100%;
+
+    &:hover .showcase__card {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover .showcase__card--back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  &__card {
+    display: block;
+    position: absolute;
+    height: 42rem;
+    width: 100%;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-image: linear-gradient(
+      rgba($color-grey-dark-1, 0.5) 0%,
+      rgba($color-grey-dark-1, 0.3) 50%,
+      rgba($color-grey-dark-1, 0.2) 75%,
+      rgba($color-grass, 0.5)
+    );
+    border-radius: 5px;
+    box-shadow: 2rem 2rem 2rem rgba($color-black, 0.3);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.8s ease-in-out;
+
+    @include respond(tab-port) {
+      height: 55rem;
+    }
+
+    &--back {
+      position: absolute;
+      transform: rotateY(180deg);
+      background-image: linear-gradient(
+        rgba($color-grey-dark-1, 0.8),
+        rgba($color-grass, 1)
+      );
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    height: 10rem;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      height: 15rem;
+    }
+  }
+
+  &__content {
+    color: $color-white;
+    font-size: $default-font-size;
+    margin-bottom: 1rem;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+  }
+
+  &__image {
+    transition: all 0.3s ease-in-out;
+    @include respond(tab-port) {
+      transform: translate(3rem, -5rem);
+    }
+
+    &-1 {
+      // FIAT
+      height: 17rem;
+      transform: translate(-3rem, 4rem);
+    }
+
+    &-4 {
+      // ROLLS ROYCE
+      height: 18rem;
+      transform: translate(-4rem, 1rem);
+    }
+
+    &-5 {
+      // BMW
+      height: 22rem;
+      transform: translate(-3.5rem, -2rem);
+    }
+
+    &-6 {
+      // BUICK
+      height: 27rem;
+      transform: translateY(-6.5rem);
+      @include respond(tab-port) {
+        transform: translate(-3rem, -6rem);
+      }
+    }
+
+    &-8 {
+      // CADILLAC
+      height: 16rem;
+      transform: translate(-2rem, 3rem);
+    }
+  }
+
+  &__back-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    color: $color-white;
+    font-size: 5rem;
+    font-weight: 200;
+  }
+
+  &__paginate {
+    display: flex;
+    justify-content: center;
+    color: $color-white;
+    font-size: 1.7rem;
+  }
+
+  &__dot {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &--1 {
+      color: $color-tertiary-light;
+    }
+  }
+}
