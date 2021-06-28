@@ -748,6 +748,9 @@ body {
     @media only screen and (max-width: 56.25em) {
       .header__text-box {
         width: 80%; } }
+    @media only screen and (max-width: 25em) {
+      .header__text-box {
+        background-image: linear-gradient(rgba(3, 7, 30, 0.3), rgba(208, 0, 0, 0.3)), url("../img/main/hero-small.jpeg"); } }
 
 .row {
   max-width: 114rem;
