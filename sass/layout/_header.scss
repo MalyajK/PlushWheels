@@ -9,14 +9,6 @@
   background-size: cover;
   background-position: center;
 
-  @include respond(phone400) {
-    background-image: linear-gradient(
-        rgba($color-black, 0.3),
-        rgba($color-primary, 0.3)
-      ),
-      url('../img/main/hero-small.jpeg');
-  }
-
   &__text-box {
     display: block;
     width: fit-content;
