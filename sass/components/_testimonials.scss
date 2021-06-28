@@ -31,8 +31,8 @@
     border: 18px solid $color-grey-light-2;
 
     @include respond(phone) {
-      height: 45rem;
-      width: 45rem;
+      height: 35rem;
+      width: 35rem;
       border: 22px solid $color-grey-light-2;
     }
   }
@@ -41,17 +41,18 @@
     height: 25rem;
     opacity: 0.6;
     transition: all 0.3s ease-out;
+
     @include respond(phone) {
-      height: 45rem;
-      width: 45rem;
+      height: 35rem;
+      width: 35rem;
     }
 
     &--2 {
       transform: translateX(-4rem);
 
       @include respond(phone) {
-        width: 75rem;
-        transform: translateX(-8rem);
+        width: 55rem;
+        transform: translateX(-5rem);
       }
     }
 
@@ -62,8 +63,8 @@
     &--4 {
       transform: translateX(-8rem);
       @include respond(phone) {
-        width: 75rem;
-        transform: translateX(-18rem);
+        width: 60rem;
+        transform: translateX(-15rem);
       }
     }
 

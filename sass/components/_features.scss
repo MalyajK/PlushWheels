@@ -53,6 +53,7 @@
   &__picture {
     color: $color-tertiary-light;
     text-align: center;
+    height: fit-content;
 
     &--1 {
       font-size: 5rem;
@@ -73,8 +74,5 @@
   &__details {
     color: $color-white;
     font-size: 1.5rem;
-
-    @include respond(tab-land) {
-    }
   }
 }
