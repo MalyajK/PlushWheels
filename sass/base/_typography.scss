@@ -34,6 +34,11 @@ body {
     font-size: 3.7rem;
     font-weight: 700;
     letter-spacing: 1rem;
+
+    @include respond(phone400) {
+      letter-spacing: 0.5rem;
+      font-size: 3rem;
+    }
   }
 
   &--sub {

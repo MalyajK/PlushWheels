@@ -22,6 +22,10 @@
       grid-template-columns: 95% 0;
       grid-row-gap: 2rem;
     }
+
+    @include respond(phone400) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__card-container {
@@ -66,8 +70,12 @@
       height: 55rem;
     }
 
-    @include respond(tab-port) {
+    @include respond(phone) {
       height: 47rem;
+    }
+
+    @include respond(phone400) {
+      height: 43rem;
     }
 
     &--back {

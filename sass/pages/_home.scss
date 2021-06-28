@@ -41,6 +41,11 @@
     height: 280rem;
     padding: 5rem 3rem;
   }
+
+  @include respond(phone400) {
+    height: 240rem;
+    padding: 5rem 3rem;
+  }
 }
 
 .section-testimonials {
@@ -54,7 +59,7 @@
   background-size: cover;
   background-position: bottom;
   padding: 10rem 15rem;
-  height: 70rem;
+  height: 55rem;
 
   @include respond(tab-land) {
     padding: 10rem 10rem;
@@ -69,12 +74,16 @@
     padding: 5rem 3rem;
     height: 220rem;
   }
+
+  @include respond(phone400) {
+    height: 200rem;
+  }
 }
 
 .section-awards {
   background-color: $color-tertiary-light;
   padding: 10rem 15rem;
-  height: 80rem;
+  height: 70rem;
 
   @include respond(tab-land) {
     height: 70rem;
@@ -100,7 +109,7 @@
   background-size: cover;
   background-position: bottom;
   padding: 10rem 20rem;
-  height: 100rem;
+  height: 90rem;
   overflow: hidden;
 
   @include respond(tab-port) {
@@ -109,6 +118,11 @@
 
   @include respond(phone) {
     padding: 5rem 3rem;
+  }
+
+  @include respond(phone400) {
+    padding: 5rem 5rem;
+    height: 90rem;
   }
 }
 

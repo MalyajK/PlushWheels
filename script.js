@@ -37,3 +37,5 @@ hamburger.addEventListener('click', () => {
 closeNavbarModal.addEventListener('click', () => {
   navbarModal.style.display = 'none';
 });
+
+// Show or hide testimonials modal

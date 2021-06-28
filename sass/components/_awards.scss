@@ -82,6 +82,10 @@
       transform: translate(0rem, -33rem);
     }
 
+    @include respond(phone400) {
+      transform: translate(0rem, -37rem);
+    }
+
     &--1 {
       color: $color-secondary-light;
     }
