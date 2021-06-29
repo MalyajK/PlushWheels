@@ -612,6 +612,10 @@ body {
     @media only screen and (max-width: 37.5em) {
       .footer__social {
         font-size: 5rem; } }
+  .footer__copyright {
+    color: #777;
+    margin-top: 2rem;
+    font-size: 1.3rem; }
 
 .nbsp {
   background-color: transparent; }
@@ -863,7 +867,7 @@ body {
       height: 90rem; } }
 
 .section-footer {
-  height: 50rem;
+  height: 55rem;
   background-image: linear-gradient(rgba(3, 7, 30, 0.2), #03071e), url("../img/footer/footer-bg.jpeg");
   background-size: contain;
   background-position: bottom;
